@@ -1,0 +1,706 @@
+* {
+    font-family: Helvetica;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(213, 220, 244); 
+}
+/******************************************************************
+CONTENEDORES GLOBALES
+******************************************************************/
+header {
+    /* background-color: rgb(222, 49, 99);
+    border: 1px solid black; */
+    grid-area: Header;
+    position: relative;
+}
+/*****************************************************************/
+/*****************************************************************/
+.TextoUsuario {
+    /* background-color: rgb(128, 0, 128);
+    border: 1px solid black; */
+    grid-area: TextoUsuario;
+    position: relative;
+    display: flex;
+}
+/*****************************************************************/
+/*****************************************************************/
+.T-Encriptar {
+    border: none;
+    background-color: transparent;
+    color: rgb(10,13,113);
+}
+
+.T-Encriptar:hover {
+    box-shadow: 0 0 2px rgb(10,13,113);
+    border-radius: 2%;
+}
+
+.T-Encriptar::placeholder {
+    color: rgb(10,13,113);
+}
+/*****************************************************************/
+.AccionesUsuario {
+    /* background-color: rgb(255, 191, 0);
+    border: 1px solid black; */
+    grid-area: AccionesUsuario;
+}
+
+.LabelBotonEncriptar {
+    font-size: 10px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.BotonEncriptar {
+    background-color: rgb(10,13,113);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s ease-out;
+}
+
+.BotonEncriptar:hover {
+    background-color: papayawhip;
+    transform: scale(1.04);
+    border: 1px solid rgb(10,13,113);
+    color: rgb(10,13,113);
+}
+
+.BotonDesencriptar {
+    background-color: transparent;
+    border: 1px solid rgb(10,13,113);
+    border-radius: 20px;
+    color: rgb(10,13,113);
+    transition: all 0.5s ease-out;
+}
+
+.BotonDesencriptar:hover {
+    background-color: papayawhip;
+    transform: scale(1.04);
+}
+/*****************************************************************/
+/*****************************************************************/
+.TextoEncriptado {
+    /*background-color: rgb(159, 226, 191);
+    border: 1px solid black;*/
+    grid-area: TextoEncriptado;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.BotonCopy {
+    background-color: white;
+    color:rgb(10,13,113);
+    border: 1px solid rgb(10,13,113);
+    border-radius: 20px;
+    transition: all 0.5s ease-out;  
+}
+/*****************************************************************/
+/*****************************************************************/
+footer {
+    /* background-color: rgb(100, 149, 237);
+    border: 1px solid black; */
+    grid-area: footer;
+    font-size: 10px;
+    text-align: center;
+}
+
+/******************************************************************/
+/*RESPONSIVE SCREENS*/
+/******************************************************************/
+@media screen and (width <= 767px) {
+    /* Celulares */
+    body {
+        display: grid;
+        gap: 1vh;
+        grid-template-rows: 0.9fr 3fr 1fr 3fr 0.35fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'Header' 'TextoUsuario' 'AccionesUsuario' 'TextoEncriptado' 'footer';
+        height: 100vh; 
+    }
+    /**************************************************************/
+    .LogoPpal {
+        position: relative;
+        top: 50%;
+        left: 4%;
+        transform: translate(0, -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .T-Encriptar {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .AccionesUsuario {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .LabelBotonEncriptar {
+        width: 80%;
+        margin: 2px auto 3px 5%;
+        /*Centra imagen y texto del label*/
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+    }
+    .contenedorbotones{
+        text-align: center;
+    }
+    .BotonEncriptar {
+        width: 90%;
+        height: 40px;
+        margin: 5px auto;
+    }
+    .BotonDesencriptar {
+        width: 90%;
+        height: 40px;
+        margin: 5px auto;
+    }
+    /**************************************************************/
+    .T-Encriptado {
+        display: block;
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+    }
+    .T-Encriptado[disabled] {
+        background-color: white;
+    }
+    .BotonCopy {
+        width: 60%;
+        height: 40px;
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+    }
+    .BotonCopy:hover {
+        background-color: #d5ffef;
+        transform: scale(1.04) translate(-48%, -50%);
+    }
+    .NoneText {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+    .ImagenNoneText {
+        display: none;
+    }
+    @media (width < 200px) {
+        .NoneText {
+            visibility: hidden;
+        }
+    }
+}
+/******************************************************************/
+@media screen and (width >= 768px) and (width <= 991px) {
+    /* Tablets */
+    body {
+        display: grid;
+        gap: 1vh;
+        grid-template-rows: 0.9fr 3fr 1fr 3fr 0.35fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'Header' 'TextoUsuario' 'AccionesUsuario' 'TextoEncriptado' 'footer';
+        height: 100vh; 
+    }
+    /**************************************************************/
+    .LogoPpal {
+        position: relative;
+        top: 50%;
+        left: 4%;
+        transform: translate(0, -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .T-Encriptar {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .AccionesUsuario {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .LabelBotonEncriptar {
+        width: 83%;
+        margin: 2px auto 3px auto;
+        /*Centra imagen y texto del label*/
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+    }
+    .contenedorbotones{
+        text-align: center;
+    }
+    .BotonEncriptar {
+        display: inline-block;
+        width: 40%;
+        height: 40px;
+        margin: 5px 10px 5px auto;
+    }
+    .BotonDesencriptar {
+        display: inline-block;
+        width: 40%;
+        height: 40px;
+        margin: 5px auto 5px 10px;
+    }
+    /**************************************************************/
+    .T-Encriptado {
+        display: block;
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+    }
+    .T-Encriptado[disabled] {
+        background-color: white;
+    }
+    .BotonCopy {
+        width: 60%;
+        height: 40px;
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+    }
+    .BotonCopy:hover {
+        background-color: #d5ffef;
+        transform: scale(1.04) translate(-48%, -50%);
+    }
+    .NoneText {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+    .ImagenNoneText {
+        display: none;
+    }    
+}
+/******************************************************************/
+@media screen and (width >= 992px) and (width <= 1024px) {
+    /* Desktops - laptops hasta 1024*/
+    body {
+        display: grid;
+        gap: 3vh;
+        grid-template-rows: 1fr 2fr 0.5fr 0.5fr 0.2fr;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        grid-template-areas: 
+        'Header Header TextoEncriptado'
+        'TextoUsuario TextoUsuario TextoEncriptado'
+        'TextoUsuario TextoUsuario TextoEncriptado'
+        'AccionesUsuario AccionesUsuario TextoEncriptado'
+        'footer footer TextoEncriptado';
+        height: 100vh; 
+    }
+    /**************************************************************/
+    .LogoPpal {
+        position: relative;
+        top: 50%;
+        left: 6%;
+        transform: translate(0, -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .T-Encriptar {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 90%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    /**************************************************************/
+    .AccionesUsuario {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .LabelBotonEncriptar {
+        width: 83%;
+        margin: 2px auto 3px 20%;
+        /*Centra imagen y texto del label*/
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: Helvetica;
+        font-size: 12px;
+    }
+    .contenedorbotones{
+        text-align: center;
+        margin-left: 18%;
+    }
+    .BotonEncriptar {
+        display: inline-block;
+        width: 45%;
+        height: 40px;
+        margin: 5px 10px 5px auto;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .BotonDesencriptar {
+        display: inline-block;
+        width: 45%;
+        height: 40px;
+        margin: 5px auto 5px 10px;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    /**************************************************************/
+    .TextoEncriptado {
+        height: 85%;
+        position: relative;
+        top: 8.8%;
+    }
+    .T-Encriptado {
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .T-Encriptado[disabled] {
+        background-color: white;
+    }
+    .BotonCopy {
+        width: 60%;
+        height: 40px;
+        position: absolute;
+        top: 93%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .BotonCopy:hover {
+        background-color: #d5ffef;
+        transform: scale(1.04) translate(-48%, -50%);
+    }
+    /**************************************************************/
+    footer {
+        margin-left: 18%;
+    }
+    .ImagenNoneText {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }    
+    .NoneText {
+        visibility: hidden;
+    }
+}
+/******************************************************************/ 
+@media screen and (width >= 1025px) and (width <= 1440px) {
+    /* Desktops - laptops desde 1024 hasta 1440 */
+    body {
+        display: grid;
+        gap: 3vh;
+        grid-template-rows: 1fr 2fr 0.5fr 0.5fr 0.2fr;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        grid-template-areas: 
+        'Header Header TextoEncriptado'
+        'TextoUsuario TextoUsuario TextoEncriptado'
+        'TextoUsuario TextoUsuario TextoEncriptado'
+        'AccionesUsuario AccionesUsuario TextoEncriptado'
+        'footer footer TextoEncriptado';
+        height: 100vh; 
+    }
+    /**************************************************************/
+    .LogoPpal {
+        position: relative;
+        top: 50%;
+        left: 6%;
+        transform: translate(0, -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .T-Encriptar {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 90%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    /**************************************************************/
+    .AccionesUsuario {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .LabelBotonEncriptar {
+        width: 83%;
+        margin: 2px auto 3px 20%;
+        /*Centra imagen y texto del label*/
+        display: flex;
+        align-items: center;
+        gap: 5px;        
+        font-family: Helvetica;
+        font-size: 12px;
+    }
+    .contenedorbotones{
+        text-align: center;
+        margin-left: 18%;
+    }
+    .BotonEncriptar {
+        display: inline-block;
+        width: 45%;
+        height: 40px;
+        margin: 5px 10px 5px auto;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .BotonDesencriptar {
+        display: inline-block;
+        width: 45%;
+        height: 40px;
+        margin: 5px auto 5px 10px;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    /**************************************************************/
+    .TextoEncriptado {
+        height: 85%;
+        position: relative;
+        top: 8.8%;
+    }
+    .T-Encriptado {
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .T-Encriptado[disabled] {
+        background-color: white;
+    }
+    .BotonCopy {
+        width: 60%;
+        height: 40px;
+        position: absolute;
+        top: 93%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .BotonCopy:hover {
+        background-color: #d5ffef;
+        transform: scale(1.04) translate(-48%, -50%);
+    }
+    /**************************************************************/
+    footer {
+        margin-left: 18%;
+    }
+    .ImagenNoneText {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }    
+    .NoneText {
+        visibility: hidden;
+    }
+}
+ /******************************************************************/ 
+ @media screen and (width >= 1441px) {
+    /* Desktops - laptops de 4K en adelante */
+    body {
+        display: grid;
+        gap: 3vh;
+        grid-template-rows: 1fr 2fr 0.5fr 0.5fr 0.2fr;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        grid-template-areas: 
+        'Header Header TextoEncriptado'
+        'TextoUsuario TextoUsuario TextoEncriptado'
+        'TextoUsuario TextoUsuario TextoEncriptado'
+        'AccionesUsuario AccionesUsuario TextoEncriptado'
+        'footer footer TextoEncriptado';
+        height: 100vh; 
+    }
+    /**************************************************************/
+    .LogoPpal {
+        position: relative;
+        top: 50%;
+        left: 6%;
+        transform: translate(0, -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /**************************************************************/
+    .T-Encriptar {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 90%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    /**************************************************************/
+    .AccionesUsuario {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .LabelBotonEncriptar {
+        width: 83%;
+        margin: 2px auto 3px 20%;
+        /*Centra imagen y texto del label*/
+        display: flex;
+        align-items: center;
+        gap: 5px;        
+        font-family: Helvetica;
+        font-size: 12px;
+    }
+    .contenedorbotones{
+        text-align: center;
+        margin-left: 18%;
+    }
+    .BotonEncriptar {
+        display: inline-block;
+        width: 45%;
+        height: 40px;
+        margin: 5px 10px 5px auto;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .BotonDesencriptar {
+        display: inline-block;
+        width: 45%;
+        height: 40px;
+        margin: 5px auto 5px 10px;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    /**************************************************************/
+    .TextoEncriptado {
+        height: 85%;
+        position: relative;
+        top: 8.8%;
+    }
+    .T-Encriptado {
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        height: 65%;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 1;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .T-Encriptado[disabled] {
+        background-color: white;
+    }
+    .BotonCopy {
+        width: 60%;
+        height: 40px;
+        position: absolute;
+        top: 93%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+    .BotonCopy:hover {
+        background-color: #d5ffef;
+        transform: scale(1.04) translate(-48%, -50%);
+    }
+    /**************************************************************/
+    footer {
+        margin-left: 18%;
+    }
+    .ImagenNoneText {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }    
+    .NoneText {
+        visibility: hidden;
+    }
+}
+ /******************************************************************/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="LogoPpal" src="img/Logo.png" alt="Logo Alura" width="54" height="36">
+    </header>
+
+    <section class="TextoUsuario">
+        <textarea id="T-Encriptar" class="T-Encriptar" cols="30" rows="10" placeholder="-->Ingrese el texto aquí..."></textarea>
+    </section>
+
+    <section class="AccionesUsuario">
+        <div class="contenedorlabel">
+            <label for="BotonEncriptar" class="LabelBotonEncriptar">
+                <img src="img/bi_exclamation.png" alt="Exclamación" width="12" height="12">Solo letras minúsculas sin caracteres especiales ni acentos 
+            </label>
+        </div>
+        <div class="contenedorbotones">
+            <button id="BotonEncriptar" class="BotonEncriptar">Encriptar</button>
+            <button id="BotonDesencriptar" class="BotonDesencriptar">Desencriptar</button>
+        </div>
+    </section>
+
+    <section class="TextoEncriptado">
+        <h1>
+            <textarea id="T-Encriptado" class="T-Encriptado" cols="30" rows="10"></textarea>
+        </h1>
+        <h1>
+            <button id="BotonCopy" class="BotonCopy">Copiar</button>
+        </h1>
+        <h1 id="NoneText" class="NoneText">
+            <img src="img/Figura-none-text-A.png" alt="Figura None Text" width="171.5" height="77">
+        </h1>
+        <h1 id="ImagenNoneText" class="ImagenNoneText">
+            <img src="img/Figura-none-text-B.png" alt="Figura None Text" width="165.5" height="236">
+        </h1>
+    </section>
+
+    <footer>
+        <h6>Desarrollado por: Johnn Montañez Sarmiento</h6>
+        <h6>Challenge: Encriptador</h6>
+    </footer>  
+
+    <script src="index.js"></script>
+
+</body>
+</html>
