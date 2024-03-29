@@ -30,7 +30,7 @@ las llaves de encriptación empleadas son:
 - Incluirá un botón que permita al usuario copiar el texto una vez esté encriptado o desencriptado.
  
 ### Modo de uso.
-- Introduzca o pegue el mensaje en el cuadro de texto señalado con el placeholder o guía "--> Ingrese el texto aquí...".
+- Introduzca o pegue el mensaje en el cuadro de texto señalado con el *placeholder* o *guía* "-->Ingrese el texto aquí...".
 - Tras completar el texto, el aplicativo ofrece la posibilidad de convertirlo a su versión encriptada o revertir el texto
   encriptado a su versión original. Para ello, el usuario cuenta con dos botones en la parte inferior, debidamente identificados.
 - Finalizado el proceso de encriptación o desencriptación, el aplicativo mostrará el texto resultante y permitirá su copia al portapapeles para su uso.
