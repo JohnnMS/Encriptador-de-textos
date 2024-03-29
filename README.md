@@ -35,3 +35,20 @@ las llaves de encriptación empleadas son:
   encriptado a su versión original. Para ello, el usuario cuenta con dos botones en la parte inferior, debidamente identificados.
 - Finalizado el proceso de encriptación o desencriptación, el aplicativo mostrará el texto resultante y permitirá su copia al portapapeles para su uso.
 - Al efectuar la copia, el aplicativo vuelve a su estado inicial.
+
+### Diseños responsivos.
+
+- Móviles o celulares.
+
+<img width="162" alt="Responsivo-Móvil" src="https://github.com/JohnnMS/Portafolio/assets/99614055/20b956ee-8642-4c9a-a4df-cef24d8de6b9">
+
+
+- Tablets.
+
+<img width="292" alt="Responsivo-Tablets" src="https://github.com/JohnnMS/Portafolio/assets/99614055/e16a3e67-d478-44a2-b9d6-9e6c3bd46848">
+
+
+- Computadores.
+  
+<img width="455" alt="Responsivo-PC" src="https://github.com/JohnnMS/Portafolio/assets/99614055/1dd1be0e-fd5f-4350-bf07-67d02f47e2b3">
+
