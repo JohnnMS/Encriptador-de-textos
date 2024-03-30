@@ -1,6 +1,6 @@
 
 # CHALLENGE 1: ENCRIPTADOR DE TEXTO.
-Versión final -1.0- del primer challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Netx Education.
+Versión final -1.0- del primer challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.
 
 ## DESCRIPCIÓN.
 El Encriptador de Texto es una herramienta desarrollada como parte del proceso de formación de Alura & Oracle Next Education. 
@@ -16,7 +16,7 @@ las llaves de encriptación empleadas son:
 ### Componentes.
 - Logo.
 - Cuadro de texto tipo *Input*.
-- Texto tipo *label* con indicación
+- Texto tipo *label* con indicación.
 - Botón Encriptar.
 - Botón Desencriptar.
 - Botón para Copiar.
