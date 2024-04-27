@@ -1,6 +1,6 @@
 
 # CHALLENGE 1: ENCRIPTADOR DE TEXTO.
-GitHub page: https://johnnms.github.io/Portafolio/
+GitHub page: https://johnnms.github.io/Encriptador-de-textos/
 
 Versión final -1.0- del primer challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.
 
