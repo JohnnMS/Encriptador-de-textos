@@ -1,6 +1,14 @@
 # CHALLENGE 1: Encriptador de textos 🔐
 
-Versión final -1.0- del primer challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.
+Primer challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.
+
+![Static Badge](https://img.shields.io/badge/Build-Passing-brightgreen?&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/HTML-grey?logo=html5&logoSize=auto)
+![Static Badge](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=%231572B6&logoSize=auto)
+![Static Badge](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoSize=auto)
+
+![Static Badge](https://img.shields.io/badge/Latest-v1.0.0-blue?logoColor=white&logoSize=auto&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/License-MIT-%23ED7117?logoColor=white&logoSize=auto&labelColor=grey)
 
 🌎​ GitHub page: https://johnnms.github.io/Encriptador-de-textos/
 
