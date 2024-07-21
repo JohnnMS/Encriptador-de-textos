@@ -10,7 +10,7 @@ Primer challenge desarrollado en el proceso de formación con Alura LATAM & Orac
 ![Static Badge](https://img.shields.io/badge/Latest-v1.0.0-blue?logoColor=white&logoSize=auto&labelColor=grey)
 ![Static Badge](https://img.shields.io/badge/License-MIT-%23ED7117?logoColor=white&logoSize=auto&labelColor=grey)
 
-![Static Badge](https://img.shields.io/badge/%C2%BFVer%20GitHub%20Page%3F%20%F0%9F%8C%8E%E2%80%8B%20Haz%20clic%20aqu%C3%AD-grey?logo=github&link=https%3A%2F%2Fjohnnms.github.io%2FEncriptador-de-textos%2F)
+[![Static Badge](https://img.shields.io/badge/%C2%BFVer%20GitHub%20Page%3F%20%F0%9F%8C%8E%E2%80%8B%20Haz%20clic%20aqu%C3%AD-grey?logo=github)](https://johnnms.github.io/Encriptador-de-textos/)
 
 ## DESCRIPCIÓN.
 El Encriptador de Texto es una herramienta desarrollada como parte del proceso de formación de Alura & Oracle Next Education. 
